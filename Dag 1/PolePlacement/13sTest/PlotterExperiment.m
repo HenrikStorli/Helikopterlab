@@ -1,0 +1,26 @@
+load('states1.mat');
+load('states2.mat');
+load('states3.mat');
+load('states4.mat');
+load('states5.mat');
+load('states6.mat');
+load('states7.mat');
+load('states8.mat');
+load('Ref.mat');
+figure(1);
+
+plot(S1(1,:),S1(4,:));
+hold on;
+plot(S2(1,:),S2(4,:));
+plot(S3(1,:),S3(4,:));
+plot(S4(1,:),S4(4,:));
+plot(S5(1,:),S5(4,:));
+plot(S6(1,:),S6(4,:));
+plot(S7(1,:),S7(4,:));
+plot(S8(1,:),S8(4,:));
+plot(Rf_pitch(1,:),Rf_pitch(2,:));
+legend('-100i , -100i','-i,i','5+i,5-i','20,20','-5-5i,-5+5i','-2,-2','-100,-100','-1,-20','Pitch-Ref');
+grid on;
+xlabel('Time [s]');
+ylabel('Pitch [rad]');
+title('Pitch angle using different poles');
